@@ -6,7 +6,7 @@ import anthropic
 import httpx
 import pytest
 
-from src.vta.agent import loop
+from src.gta.agent import loop
 
 REQ = httpx.Request("POST", "https://api.anthropic.com/v1/messages")
 

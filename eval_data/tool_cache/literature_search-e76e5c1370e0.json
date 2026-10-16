@@ -1,0 +1,12 @@
+{
+  "tool": "literature_search",
+  "input": {
+    "query": "OR2T4 cardiac arrhythmia risk",
+    "k": 10
+  },
+  "output": {
+    "found": false,
+    "error": "No PubMed results for query 'OR2T4 cardiac arrhythmia risk'",
+    "candidates_fetched": 0
+  }
+}

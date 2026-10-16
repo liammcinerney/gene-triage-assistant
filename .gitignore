@@ -7,3 +7,4 @@ venv/
 *.egg-info/
 .pytest_cache/
 eval_results/
+eval_data/judge_cache/

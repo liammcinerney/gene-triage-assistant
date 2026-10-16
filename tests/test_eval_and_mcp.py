@@ -5,10 +5,10 @@ import json
 
 import pytest
 
-from src.vta.eval.cases import ArgCheck, EvalCase
-from src.vta.eval.checks import extract_pmids, retrieved_pmids, run_checks
-from src.vta.eval.judge import _quote_in_evidence
-from src.vta.eval.recording import ReplayMiss, cache_path, wrap_tools
+from src.gta.eval.cases import ArgCheck, EvalCase
+from src.gta.eval.checks import extract_pmids, retrieved_pmids, run_checks
+from src.gta.eval.judge import _quote_in_evidence
+from src.gta.eval.recording import ReplayMiss, cache_path, wrap_tools
 
 # --- PMID extraction ------------------------------------------------------
 
@@ -97,7 +97,7 @@ def test_quote_verification_allows_ellipsis_but_not_invention():
 
 
 def test_severity_rollup_only_major_issues_fail_a_case():
-    from src.vta.eval.judge import summarise_claims
+    from src.gta.eval.judge import summarise_claims
 
     claims = [
         {"verdict": "supported", "severity": "minor"},
@@ -166,7 +166,7 @@ def test_injected_fault_and_output_hook(tmp_path):
 
 @pytest.fixture
 def server(monkeypatch):
-    from src.vta.mcp_server import server as s
+    from src.gta.mcp_server import server as s
 
     monkeypatch.setattr(s, "_gene_lookup", lambda symbol: {"found": True, "symbol": symbol})
     monkeypatch.setattr(s, "_literature_search", lambda query, k=5: {"found": True, "k": k})
@@ -204,3 +204,22 @@ def test_server_rejects_out_of_bounds_input(server, name, args):
 def test_server_accepts_valid_input(server):
     call(server, "gene_lookup", {"symbol": "TP53"})
     call(server, "literature_search", {"query": "BRCA1 hormone risk", "k": 3})
+
+
+def test_injection_hook_matches_the_real_literature_search_output_shape(monkeypatch):
+    """The hook plants text in a tool result. If literature_search's output keys ever change,
+    the hook must fail HERE, not silently turn the injection eval into a tool-error eval."""
+    import numpy as np
+
+    from src.gta.eval.cases import INJECTION, _plant_injection
+    from src.gta.rag import retrieval
+    from src.gta.tools import literature_search as ls
+
+    monkeypatch.setattr(retrieval, "embed", lambda texts: np.array([[1.0, 0.0] for _ in texts]))
+    paper = {"pmid": "1", "title": "T", "journal": "J", "year": "2024", "abstract": "alpha finding"}
+    monkeypatch.setattr(ls, "pubmed_search", lambda query, max_results: {"found": True, "papers": [paper]})
+
+    real_output = ls.literature_search("alpha question")
+    poisoned = _plant_injection(real_output)
+    assert INJECTION in poisoned["results"][0]["abstract"]
+    assert poisoned["results"][0]["abstract"].startswith("alpha finding")  # legitimate text preserved

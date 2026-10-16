@@ -1,0 +1,53 @@
+{
+  "tool": "literature_search",
+  "input": {
+    "query": "HRT breast cancer BRCA1",
+    "k": 5
+  },
+  "output": {
+    "found": true,
+    "candidates_fetched": 15,
+    "results": [
+      {
+        "pmid": "41403285",
+        "title": "Menopausal hormone therapy and the risk of breast cancer in women with a pathogenic variant in BRCA1 or BRCA2.",
+        "journal": "Journal of the National Cancer Institute",
+        "year": "2026",
+        "abstract": "Women with a pathogenic variant in BRCA1 or BRCA2 are at high risk of developing ovarian cancer, and it is often recommended that they undergo bilateral salpingo-oophorectomy at an early age, resulting in surgical menopause. Menopausal hormone replacement therapy (HRT) is an effective way to mitigate the adverse outcomes of early menopause; however, the safety of menopausal HRT on breast cancer risk in this population has not been established. We conducted a prospective matched analysis of HRT use following menopause and breast cancer risk in BRCA carriers. Women who initiated HRT were matched one-to-one with women who had not initiated menopausal HRT by gene, year of birth, and age at menopause, resulting in 676 matched pairs. Menopausal HRT use collected by questionnaire included formulation and mode of administration. After a mean of 5.6\u2009years, there were 87 (12.9%) incident breast cancer cases in the 676 exposed women and 128 (18.9%) cases in the 676 unexposed women (P\u2009=\u2009.002). Compared with unexposed matched control individuals, women who used estrogen alone experienced a statistically significantly decreased risk of breast cancer (hazard ratio\u2009=\u20090.37, 95% CI\u2009=\u20090.24 to 0.57). No protective or adverse effect was associated with the use of estrogen plus progestogen (hazard ratio\u2009=\u20090.94, 95% CI\u2009=\u20090.54 to 1.63). Our findings suggest no substantial increase in the risk of breast cancer in BRCA carriers with the use of HRT and that estrogen alone might be protective.",
+        "similarity": 0.731
+      },
+      {
+        "pmid": "26780555",
+        "title": "Hormone replacement therapy after menopause and risk of breast cancer in BRCA1 mutation carriers: a case-control study.",
+        "journal": "Breast cancer research and treatment",
+        "year": "2016",
+        "abstract": "Many BRCA1 mutation carriers undergo elective surgical oophorectomy (often before menopause) to manage their elevated risk of developing ovarian cancer. It is important to clarify whether or not the use of hormone replacement therapy (HRT) to mitigate the symptoms associated with surgical or natural menopause is safe in women with an inherited BRCA1 mutation and no personal history of breast or ovarian cancer. We conducted a case-control analysis of 432 matched pairs of women with a BRCA1 mutation. Detailed information on HRT use after menopause (duration, type, age at first/last use, formulation) was obtained from a research questionnaire administered at the time of study enrollment. Conditional logistic regression was used to estimate the odds ratio (OR) and 95 % confidence intervals (CI) associated with HRT use. The mean duration of HRT use after menopause was 4.3 years among the cases and 4.4 years among the controls (P = 0.83). The adjusted OR for breast cancer comparing all women who ever used HRT to those who never used HRT was 0.80 (95 % CI 0.55-1.16; P = 0.24). Findings did not differ by type of menopause (natural vs. surgical), by recency of use, by duration of use, and by formulation type. These findings suggest that a short course of HRT should not be contra-indicated for BRCA1 mutation carriers who have undergone menopause and who have no personal history of cancer.",
+        "similarity": 0.678
+      },
+      {
+        "pmid": "16137751",
+        "title": "Hormone replacement therapy and the risk of ovarian cancer in BRCA1 and BRCA2 mutation carriers.",
+        "journal": "Gynecologic oncology",
+        "year": "2006",
+        "abstract": "Hormone replacement therapy (HRT) is commonly prescribed to alleviate the climacteric symptoms of menopause. Recent findings from the Women's Health Initiative has raised questions about the routine use of HRT due to the increased observed incidence of cardiovascular disease and of breast and ovarian cancers in the treatment arm of the trial. In the general population, the association between HRT use and risk of ovarian cancer has not yet been resolved. This association has not been evaluated in BRCA1 or BRCA2 mutation carriers who face very high lifetime risks of both breast and ovarian cancers. We conducted a matched case-control study on 162 matched sets of women who carry a deleterious mutation in either the BRCA1 or BRCA2 gene. Women who had been diagnosed with ovarian cancer were matched to control subjects by mutation, year of birth, and age at menopause. Information on HRT use was derived from a questionnaire routinely administered to women who were found to be carriers of a mutation in either gene. Conditional logistic regression was used to estimate the association between HRT use and the risk of ovarian cancer, stratified by mutation status and type of HRT. Compared with those who had never used HRT, the odds ratio associated with ever use of HRT was 0.93 (95% CI = 0.56-1.56). There was no significant relationship with increasing duration of HRT use. There was a suggestion that progestin-based HRT regimens might protect against ovarian cancer (odds ratio = 0.57) but this association was not statistically significant (P = 0.20). HRT use does not appear to adversely influence the risk of ovarian cancer in BRCA mutation carriers.",
+        "similarity": 0.672
+      },
+      {
+        "pmid": "36637775",
+        "title": "Hormone replacement therapy in BRCA mutation carriers: how shall we do no harm?",
+        "journal": "Hormones (Athens, Greece)",
+        "year": "2023",
+        "abstract": "Women with a BRCA mutation have an increased risk of developing breast and ovarian cancer. Bilateral salpingo-oophorectomy is the only effective strategy to reduce this risk. Risk-reducing bilateral salpingo-oophorectomy (RRSO) is recommended between the ages of 35 and 40 for women carriers of BRCA1 and between the ages of 40 and 45 for women carriers of BRCA1 and BRCA2 mutations. Most women undergo this procedure prior to their natural menopause subsequently developing an anticipated lack of hormones. This condition affects the quality of life and longevity, while it is more pronounced in women carrying a BRCA1 mutation compared to BRCA2 because they are likely to have surgery earlier. Hormone replacement therapy (HRT) is the only strategy able to significantly compensate for the loss of ovarian hormone production and counteract menopausal symptoms. There is strong evidence that short-term HRT use does not increase the risk of breast cancer among women with a BRCA1 mutation. Few data are available on BRCA2 mutation carriers. Therefore, BRCA mutation carriers require careful counseling about the outcomes of their RRSO, including menopausal symptoms and/or the fear associated with HRT use.",
+        "similarity": 0.667
+      },
+      {
+        "pmid": "29710224",
+        "title": "Hormone Replacement Therapy After Oophorectomy and Breast Cancer Risk Among BRCA1 Mutation Carriers.",
+        "journal": "JAMA oncology",
+        "year": "2018",
+        "abstract": "Prophylactic bilateral salpingo-oophorectomy is recommended for BRCA1 mutation carriers to prevent ovarian cancer. Whether or not hormone replacement therapy (HRT) initiated after oophorectomy is associated with an increased risk of breast cancer has not been evaluated in a prospective study. To determine the association between HRT use and BRCA1-associated breast cancer. A prospective, longitudinal cohort study of BRCA1 and BRCA2 mutation carriers from 80 participating centers in 17 countries was conducted between 1995 and 2017 with a mean follow-up of 7.6 years. Participants had sought genetic testing for a BRCA1 or BRCA2 mutation because of a personal or family history of breast and/or ovarian cancer. Carriers of BRCA1 mutation with no personal medical history of cancer who underwent bilateral oophorectomy following enrollment were eligible for the cohort study. A follow-up questionnaire was administered every 2 years to obtain detailed information on HRT use. A left-truncated Cox proportional hazard analysis was used to estimate the hazard ratios (HRs) and 95% CIs associated with the initiation of HRT use postoophorectomy. Incident breast cancer. A total of 872 BRCA1 mutation carriers with a mean postoophorectomy follow-up period of 7.6 years (range, 0.4-22.1) were included in this study. Mean (SD) age of participants was 43.4 (8.5) years. Among these, 92 (10.6%) incident breast cancers were diagnosed. Overall, HRT use after oophorectomy was not associated with an increased risk of breast cancer. The HR was 0.97 (95% CI, 0.62-1.52; P\u2009=\u2009.89) for ever use of any type of HRT vs no use; however, the effects of estrogen alone and combination hormonal therapy were different. After 10 years of follow-up, the cumulative incidence of breast cancer among women who used estrogen-alone HRT was 12% compared with 22% among women who used estrogen plus progesterone HRT (absolute difference, 10%; log rank P\u2009=\u2009.04). These findings suggest that use of estrogen after oophorectomy does not increase the risk of breast cancer among women with a BRCA1 mutation and should reassure BRCA1 mutation carriers considering preventive surgery that HRT is safe. The possible adverse effect of progesterone-containing HRT warrants further study.",
+        "similarity": 0.651
+      }
+    ]
+  }
+}

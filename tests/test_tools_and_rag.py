@@ -1,10 +1,13 @@
 """Deterministic tests for the tool parsers and RAG helpers. No network, no model downloads."""
 
 import numpy as np
+import pytest
 
-from src.vta.rag import retrieval
-from src.vta.rag.chunking import chunk_abstract
-from src.vta.tools.pubmed_search import _parse_pubmed_xml
+from src.gta.rag import retrieval
+from src.gta.rag.chunking import chunk_abstract
+from src.gta.tools import gene_lookup as gl
+from src.gta.tools import literature_search as ls
+from src.gta.tools.pubmed_search import NO_ABSTRACT, _parse_pubmed_xml
 
 # --- chunking -------------------------------------------------------------
 
@@ -99,3 +102,108 @@ def test_retrieval_returns_nothing_when_nothing_is_relevant(monkeypatch):
 
 def test_retrieval_handles_no_chunks():
     assert retrieval.retrieve_top_k("query", []) == []
+
+
+# --- input validation lives in the tool functions (agent path AND MCP path) ---
+
+class _Resp:
+    def __init__(self, hits):
+        self._hits = hits
+
+    def raise_for_status(self):
+        pass
+
+    def json(self):
+        return {"hits": self._hits}
+
+
+def _no_network(*args, **kwargs):
+    raise AssertionError("the network must not be reached for invalid input")
+
+
+@pytest.mark.parametrize("bad", ["BRCA*", "TP53 OR BRCA1", "symbol:*", "", "   ", "A" * 31, 123, None])
+def test_gene_lookup_rejects_invalid_symbols_before_any_request(monkeypatch, bad):
+    monkeypatch.setattr(gl.requests, "get", _no_network)
+    result = gl.gene_lookup(bad)
+    assert result["found"] is False and "not a valid gene symbol" in result["error"]
+
+
+def test_gene_lookup_only_accepts_the_requested_gene(monkeypatch):
+    """MyGene.info ranks loosely; a different gene coming back must not be passed off as the answer."""
+    monkeypatch.setattr(gl.requests, "get", lambda *a, **k: _Resp([{"symbol": "TP53", "name": "tumor protein p53"}]))
+    wrong = gl.gene_lookup("Trp53")
+    assert wrong["found"] is False and "closest match was 'TP53'" in wrong["error"]
+
+
+def test_gene_lookup_symbol_match_ignores_case_and_surrounding_whitespace(monkeypatch):
+    seen = {}
+
+    def fake_get(url, params, timeout):
+        seen["q"] = params["q"]
+        return _Resp([{"symbol": "TP53", "name": "tumor protein p53"}])
+
+    monkeypatch.setattr(gl.requests, "get", fake_get)
+    result = gl.gene_lookup(" tp53 ")
+    assert result["found"] is True and result["symbol"] == "TP53"
+    assert seen["q"] == "symbol:tp53"  # stripped before it reaches the query string
+
+
+@pytest.mark.parametrize(
+    "kwargs",
+    [{"query": "hi"}, {"query": "x" * 301}, {"query": "BRCA1 risk", "k": 0}, {"query": "BRCA1 risk", "k": 500},
+     {"query": "BRCA1 risk", "k": "5"}, {"query": "BRCA1 risk", "k": True}, {"query": "BRCA1 risk", "fetch_n": 5000}],
+)
+def test_literature_search_rejects_invalid_arguments_before_any_request(monkeypatch, kwargs):
+    monkeypatch.setattr(ls, "pubmed_search", _no_network)
+    result = ls.literature_search(**kwargs)
+    assert result["found"] is False and result["error"].startswith("Invalid arguments")
+
+
+def test_literature_search_valid_arguments_reach_pubmed(monkeypatch):
+    monkeypatch.setattr(ls, "pubmed_search", lambda query, max_results: {"found": False, "error": "no results"})
+    assert ls.literature_search("BRCA1 hormone risk", k=3)["error"] == "no results"
+
+
+# --- small-to-big retrieval ------------------------------------------------
+
+
+def test_group_by_keeps_best_chunk_per_group_and_k_counts_groups(monkeypatch):
+    vectors = {
+        "query": np.array([1.0, 0.0]),
+        "a1": np.array([0.6, 0.8]),  # similarity 0.6
+        "a2": np.array([1.0, 0.0]),  # similarity 1.0  (best chunk of group A)
+        "b1": np.array([0.8, 0.6]),  # similarity 0.8
+    }
+    monkeypatch.setattr(retrieval, "embed", _fake_embed(vectors))
+    chunks = [{"text": "a1", "g": "A"}, {"text": "a2", "g": "A"}, {"text": "b1", "g": "B"}]
+
+    ranked = retrieval.retrieve_top_k("query", chunks, k=2, group_by="g")
+    assert [(c["g"], c["text"]) for c in ranked] == [("A", "a2"), ("B", "b1")]
+    assert len(retrieval.retrieve_top_k("query", chunks, k=1, group_by="g")) == 1
+    assert len(retrieval.retrieve_top_k("query", chunks, k=3)) == 3  # without grouping, k counts chunks
+
+
+def test_literature_search_scores_by_best_window_but_returns_the_whole_abstract(monkeypatch):
+    seen = []
+
+    def fake_embed(texts):
+        seen.extend(texts)
+        return np.array([[1.0, 0.0] if "alpha" in t else [0.0, 1.0] for t in texts])
+
+    monkeypatch.setattr(retrieval, "embed", fake_embed)
+    filler = " ".join(f"w{i}" for i in range(200))
+    papers = [
+        # relevant text in the FIRST and LAST windows: without per-paper grouping this paper would appear twice
+        {"pmid": "1", "title": "Paper A", "journal": "J", "year": "2024", "abstract": "alpha opening " + filler + " alpha finding"},
+        {"pmid": "2", "title": "Paper B", "journal": "J", "year": "2023", "abstract": filler},
+        {"pmid": "3", "title": "Paper C", "journal": "J", "year": "2022", "abstract": NO_ABSTRACT},
+    ]
+    monkeypatch.setattr(ls, "pubmed_search", lambda query, max_results: {"found": True, "papers": papers})
+
+    out = ls.literature_search("alpha question", k=5)
+
+    assert [r["pmid"] for r in out["results"]] == ["1"]  # B is irrelevant, C has no abstract
+    assert out["results"][0]["abstract"] == papers[0]["abstract"]  # whole abstract, not the matching window
+    assert out["candidates_fetched"] == 3
+    embedded = [t for t in seen if t != "alpha question"]
+    assert embedded and all(t.startswith(("Paper A", "Paper B")) for t in embedded)  # titles prepended, C skipped
