@@ -5,8 +5,15 @@ literature, and answering from what it retrieved rather than from memory. Built 
 Anthropic SDK (no agent framework) to understand every mechanism: tool calling, the agent loop,
 retrieval-augmented generation, an MCP server, and an evaluation harness.
 
-Scope: **human genes**. Variant-level (ClinVar) lookup is deliberately out of scope for this version; see
-[Extending](#extending).
+Scope: **human genes**. The tools work at the gene level: `gene_lookup` takes official gene symbols, and
+`literature_search` is free-text PubMed retrieval. **Nothing queries a variant database.** The agent cannot
+look up or resolve a variant (an rsID, or an HGVS name such as `c.5266dupC`) and has no access to ClinVar
+classifications (pathogenic, benign, uncertain significance).
+
+If you ask about a specific variant, the agent will still answer, using whatever retrieved papers say about
+it, and it does **not** currently tell you that it has no authoritative classification. See
+[Known issues](#known-issues-in-the-agent-found-by-the-harness-not-yet-fixed). Adding ClinVar is the
+intended fix; see [Extending](#extending).
 
 ## Architecture
 
@@ -187,12 +194,22 @@ abstracts, so treat the judge's reading as the source:
 - Turns an empty search into "there is no published evidence", which is a claim about the literature and
   not about the search.
 - After a simulated tool outage, sometimes answers from memory instead of saying the lookup failed.
+- **Variant questions are answered without a caveat.** Seen in one manual test, not in the eval suite (no
+  case covers it, and the judge was not run on it): asked whether a named BRCA1 variant is pathogenic, the
+  agent made one literature search and answered "yes" on the basis of two papers that mention the variant,
+  then added mechanistic reasoning that appears in no retrieved text. A paper mentioning a variant is not a
+  classification, so this approach cannot distinguish a pathogenic variant from one of uncertain
+  significance, and it never says so.
 
 ### Planned improvement (not built)
 
 Tighten the system prompt against exactly these failure types, tune it on the 12 dev cases only, and
 check a separate held-out split of new genes and topics, so the gain is not just memorisation of the dev
 cases. Success is judged by the harness against the baseline above.
+
+The same round should add a rule that, for variant-classification questions, the agent states it cannot look
+up classifications and is reporting only what papers say, plus an eval case that checks it. That is a
+stopgap. The real fix is a ClinVar tool (below).
 
 ## Production gaps (simplified for scope)
 
@@ -217,9 +234,10 @@ cases. Success is judged by the harness against the baseline above.
 
 ## Extending
 
-- **ClinVar / variants:** add `clinvar_lookup` as a pure function returning the same `{"found": ...}` shape,
-  register it in `tool_specs.py`, and the agent, the MCP server (one decorated wrapper) and the eval cases
-  pick it up without changes to the loop.
+- **ClinVar / variants (the main missing capability):** add `clinvar_lookup` as a pure function returning
+  the same `{"found": ...}` shape, register it in `tool_specs.py`, and the agent loop needs no changes; the
+  MCP server needs one decorated wrapper and the eval harness needs new cases. Not built, so the claim that
+  it slots in cleanly is a design intent, not something demonstrated here.
 - **Agent as an MCP client:** make `loop.py` discover its tools from the server instead of importing them,
   so the server is the only place tools are defined.
 
