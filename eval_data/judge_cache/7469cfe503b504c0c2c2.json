@@ -1,0 +1,38 @@
+{
+  "claims": [
+    {
+      "claim": "Trp53 is the mouse ortholog of the human TP53 gene.",
+      "verdict": "unsupported",
+      "evidence_quote": "",
+      "severity": "minor",
+      "explanation": "No evidence was retrieved. This is a textbook fact about the gene's identity, and the answer uses it only to explain scope.",
+      "quote_verified": false
+    },
+    {
+      "claim": "Mouse Trp53 is the ortholog and has highly conserved function (relative to human TP53).",
+      "verdict": "unsupported",
+      "evidence_quote": "",
+      "severity": "minor",
+      "explanation": "No evidence supports the conservation of function. The claim is a brief parenthetical that gives no specific finding.",
+      "quote_verified": false
+    }
+  ],
+  "counts": {
+    "supported": 0,
+    "overstated": 0,
+    "unsupported": 2,
+    "contradicted": 0
+  },
+  "total": 2,
+  "major_issues": 0,
+  "minor_issues": 2,
+  "grounded": true,
+  "behavior_pass": true,
+  "behavior_explanation": "The answer says the tool covers human genes only. It offers to look up human TP53 instead of presenting human data as mouse-specific fact, and it labels TP53 as the human gene. This meets the expectation.",
+  "unverified_supported": 0,
+  "usage": {
+    "input_tokens": 2019,
+    "output_tokens": 377
+  },
+  "cached": false
+}

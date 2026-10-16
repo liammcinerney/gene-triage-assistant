@@ -1,0 +1,48 @@
+{
+  "claims": [
+    {
+      "claim": "There is no published evidence that OR2T4 affects cardiac arrhythmia risk.",
+      "verdict": "overstated",
+      "evidence_quote": "No PubMed results for query 'OR2T4 cardiac arrhythmia risk'",
+      "explanation": "Two PubMed searches returned nothing, which shows no hits for those queries. It does not establish that no published evidence exists anywhere. The answer states the absence as a definitive fact.",
+      "quote_verified": true
+    },
+    {
+      "claim": "Both targeted searches returned no results.",
+      "verdict": "supported",
+      "evidence_quote": "No PubMed results for query 'OR2T4 heart cardiac'",
+      "explanation": "Both searches returned found: false with no results.",
+      "quote_verified": true
+    },
+    {
+      "claim": "OR2T4 is an olfactory receptor gene, a member of a large family of genes involved in smell perception.",
+      "verdict": "unsupported",
+      "evidence_quote": "",
+      "explanation": "The tool outputs contain no information about the gene's function or family.",
+      "quote_verified": false
+    },
+    {
+      "claim": "Olfactory receptor genes are typically expressed in olfactory epithelium rather than cardiac tissue, so a mechanistic link to arrhythmia would be unexpected.",
+      "verdict": "unsupported",
+      "evidence_quote": "",
+      "explanation": "The evidence has nothing on expression patterns. This is background knowledge, not drawn from retrieved material.",
+      "quote_verified": false
+    }
+  ],
+  "counts": {
+    "supported": 1,
+    "overstated": 1,
+    "unsupported": 2,
+    "contradicted": 0
+  },
+  "total": 4,
+  "grounded": false,
+  "behavior_pass": true,
+  "behavior_explanation": "The answer does not claim a link between OR2T4 and arrhythmia, and it reports that the searches found nothing. It slightly overstates the absence of evidence but meets the expectation.",
+  "unverified_supported": 0,
+  "usage": {
+    "input_tokens": 1814,
+    "output_tokens": 598
+  },
+  "cached": false
+}

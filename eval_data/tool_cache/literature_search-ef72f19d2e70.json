@@ -1,0 +1,53 @@
+{
+  "tool": "literature_search",
+  "input": {
+    "query": "CFTR modulators rare variants cystic fibrosis treatment efficacy",
+    "k": 5
+  },
+  "output": {
+    "found": true,
+    "candidates_fetched": 15,
+    "results": [
+      {
+        "pmid": "40944809",
+        "title": "Personalized Medicine in Cystic Fibrosis: Characterization of Eight Rare CFTR Variants in Intestinal Organoids and Cellular Models.",
+        "journal": "Molecular diagnosis & therapy",
+        "year": "2026",
+        "chunk_text": "Despite the approval of CFTR modulator (CFTRm) drugs for specific variants, many people with cystic fibrosis with non-eligible genotypes may still benefit from these medications. Indeed, recent studies show that some rare CFTR variants can be rescued by approved CFTRm drugs. we assessed the efficacy of CFTRm drugs on eight rare CFTR variants: p.Pro5Leu, p.Pro205Ser, p.Leu206Trp, p.Arg347Pro, p.Ile507del, p.Ser945Leu, p.Met1137Arg, and p.Asp1152His. Patient-derived intestinal organoids with these variants in heterozygosity with other cystic fibrosis-causing ones were analyzed by the forskolin-induced swelling assay. Clinical data from individuals undergoing CFTRm therapy were collected both before and after treatment to evaluate clinical benefit. Furthermore, we characterized the molecular defect of those eight variants individually in cystic fibrosis bronchial epithelial cells. CFTR function in intestinal organoids with genotypes p.Asp1152His/p.Phe508del, p.Asp1152His/p.Asn1303Lys, p.Pro5Leu/p.Phe508del, p.Leu206Trp/p.Phe508del, p.Ser945Leu/p.Phe508del, p.Pro205Ser/p.Tyr1092Ter, and p.Met1137Arg/c.2657+5G>A was rescued by currently available CFTRm drugs, this was not observed for organoids with genotypes p.Arg347Pro/p.Phe508del (elexacaftor/tezacaftor/ivacaftor was not tested) and p.Ile507del/p.Gln890Ter. People with cystic fibrosis who, based on our data, started CFTRm therapy showed a clinical improvement, including an increase in lung function, and a reduction in sweat chloride levels. A positive correlation was observed between forskolin-induced swelling values and change in forced expiratory volume in 1 second. This study provides evidence that the forskolin-induced swelling assay using patient-derived intestinal organoids can effectively predict the clinical outcome",
+        "similarity": 0.743
+      },
+      {
+        "pmid": "41496868",
+        "title": "Highly Effective Modulator Therapy in Cystic Fibrosis: Addressing Unusual Variants in the Middle East.",
+        "journal": "Pulmonary medicine",
+        "year": "2025",
+        "chunk_text": "Cystic fibrosis (CF) is an autosomal recessive disorder caused by variants in the CFTR gene. Although the F508del mutation is common globally, the Middle East exhibits a higher prevalence of rare, region-specific variants. The triple-combination therapy elexacaftor/tezacaftor/ivacaftor (ETI) has revolutionized CF management; however, its efficacy in individuals with rare variants, often underrepresented in clinical trials, remains less certain. This study is aimed at evaluating the real-world outcomes of ETI therapy in CF patients with rare CFTR variants predominantly found in the Middle East. This retrospective, single-center study included 12 patients with CF carrying rare Middle Eastern variants. Data on percent predicted Forced Expiratory Volume in 1 second (ppFEV1), body mass index (BMI), and annual exacerbation frequency were collected before and after 12 months of ETI treatment. Nine of these patients were previously on ivacaftor and were switched to ETI. Changes in clinical outcomes were analyzed using Wilcoxon signed-rank tests due to nonnormally distributed data. Following 12 months of ETI therapy, significant improvements were observed. The median ppFEV1 increased by 9.5% (range: 2-15). The median annual frequency of exacerbations decreased by two events (range: 0-4). BMI showed a modest median improvement of 1.5 kg/m2, which was not statistically significant. The cohort comprised nine females (75%) and three males (25%), with a median age of 24.3 years (range: 18.5-35.2 years) at the",
+        "similarity": 0.738
+      },
+      {
+        "pmid": "39208836",
+        "title": "Evaluation of elexacaftor-tezacaftor-ivacaftor treatment in individuals with cystic fibrosis and CFTRN1303K in the USA: a prospective, multicentre, open-label, single-arm trial.",
+        "journal": "The Lancet. Respiratory medicine",
+        "year": "2024",
+        "chunk_text": "CFTR modulators are approved for approximately 90% of people with cystic fibrosis in the USA and provide substantial clinical benefit. N1303K (Asn1303Lys), one of the most common class 2 CFTR defects, has not been approved for these therapies by any regulatory agency. Preclinical investigation by our laboratories showed N1303K CFTR activation with elexacaftor-tezacaftor-ivacaftor (ETI). In this trial, we evaluate whether ETI improves CFTR function, measured by sweat chloride and other clinical outcomes, in people with cystic fibrosis and CFTRN1303K. In this prospective, open-label, single-arm trial, participants aged 12 years or older with cystic fibrosis encoding at least one N1303K variant and at least one CFTRN1303K allele who were ineligible for modulator therapy by US Food and Drug Administration labelling were given ETI for 28 days followed by a 28-day washout period at two cystic fibrosis centres in the USA. Participants received two orally administered pills of 100 mg elexacaftor, 50 mg tezacaftor, and 75 mg ivacaftor once daily in the morning, and 150 mg ivacaftor once daily in the evening. The primary endpoint was mean change in sweat chloride from baseline up to day 28 compared with mixed-effects models. Secondary endpoints were changes in percentage of predicted FEV1 (ppFEV1), Cystic Fibrosis Questionnaire-Revised (CFQ-R) respiratory domain, BMI, and weight after ETI therapy. Safety was assessed in all participants who received at",
+        "similarity": 0.738
+      },
+      {
+        "pmid": "39523185",
+        "title": "Elexacaftor/tezacaftor/ivacaftor efficacy in intestinal organoids with rare CFTR variants in comparison to CFTR-F508del and CFTR-wild type controls.",
+        "journal": "Journal of cystic fibrosis : official journal of the European Cystic Fibrosis Society",
+        "year": "2025",
+        "chunk_text": "Cystic fibrosis is a life-shortening genetic disease caused by pathological variants of the cystic fibrosis transmembrane conductance regulator gene. The CFTR modulator therapy elexacaftor, tezacaftor and ivacaftor (ETI) rescues CFTR protein function and has made a significant impact on the lives of many people with CF. In Europe, ETI is currently available for people with CF who have at least one F508del mutation whilst the effect of ETI on rare CFTR variants remains unknown, albeit that many of such variants may be restored through ETI. Italy has a high prevalence of rare CFTR variants compared to the rest of Europe, potentially leading to significant undertreatment of people with rare CFTR variants. In this study, we used patient-derived intestinal organoids to identify individuals harboring rare CFTR variants who might benefit from ETI modulator therapy. Two CFTR-dependent readouts (steady-state lumen area and forskolin-induced swelling) in intestinal organoids were characterized to assess CFTR function rescue upon ETI incubation. Functional restoration by CFTR modulators was compared to wild type CFTR function, ETI-treated organoids harboring genotypes currently eligible for ETI therapy (F508del/class I) and organoids harboring non-responsive genotypes. Our data showed in vitro response to ETI within or beyond the range of CFTR function associated with F508del-ETI in 19 out of 28 organoids. This suggest that a large percentage of people with rare CFTR variants",
+        "similarity": 0.717
+      },
+      {
+        "pmid": "40645349",
+        "title": "N1303K (p.Asn1303Lys) variant: Expanding frontiers in the treatment of cystic fibrosis.",
+        "journal": "Respiratory medicine",
+        "year": "2025",
+        "chunk_text": "case highlights the potential of organoid-based testing to guide personalized CFTR modulator therapy for rare variants and underscores the importance of individualized antimicrobial strategies in addressing the complexities of CF. Expanding regulatory approval for modulators like ETI to include rare variants is essential for equitable CF care.",
+        "similarity": 0.706
+      }
+    ]
+  }
+}

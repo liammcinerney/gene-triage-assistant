@@ -1,0 +1,95 @@
+{
+  "claims": [
+    {
+      "claim": "TP53 (tumor protein p53), commonly called p53, is a tumor suppressor gene encoding a protein.",
+      "verdict": "supported",
+      "evidence_quote": "This gene encodes a tumor suppressor protein containing transcriptional activation, DNA binding, and oligomerization domains.",
+      "severity": "minor",
+      "explanation": "Matches the summary and aliases.",
+      "quote_verified": true
+    },
+    {
+      "claim": "The p53 protein binds DNA and regulates expression of target genes (transcriptional activation & DNA binding).",
+      "verdict": "supported",
+      "evidence_quote": "containing transcriptional activation, DNA binding, and oligomerization domains. The encoded protein responds to diverse cellular stresses to regulate expression of target genes",
+      "severity": "minor",
+      "explanation": "Faithful paraphrase.",
+      "quote_verified": true
+    },
+    {
+      "claim": "It responds to diverse cellular stresses (e.g., DNA damage, oxidative stress).",
+      "verdict": "overstated",
+      "evidence_quote": "The encoded protein responds to diverse cellular stresses to regulate expression of target genes",
+      "something": "",
+      "severity": "minor",
+      "explanation": "Responding to diverse stresses is supported. The specific examples (DNA damage, oxidative stress) are illustrative and not named in the evidence.",
+      "quote_verified": true
+    },
+    {
+      "claim": "Cell cycle arrest halts division to allow time for DNA repair.",
+      "verdict": "unsupported",
+      "evidence_quote": "thereby inducing cell cycle arrest, apoptosis, senescence, DNA repair, or changes in metabolism",
+      "severity": "minor",
+      "explanation": "Evidence lists cell cycle arrest but not its purpose. This is a textbook elaboration.",
+      "quote_verified": true
+    },
+    {
+      "claim": "It triggers apoptosis in cells with irreparable damage.",
+      "verdict": "unsupported",
+      "evidence_quote": "thereby inducing cell cycle arrest, apoptosis, senescence, DNA repair, or changes in metabolism",
+      "severity": "minor",
+      "explanation": "Apoptosis is supported; the 'irreparable damage' condition is added elaboration.",
+      "quote_verified": true
+    },
+    {
+      "claim": "It induces senescence (permanent cell cycle arrest), DNA repair, and metabolic changes.",
+      "verdict": "supported",
+      "evidence_quote": "inducing cell cycle arrest, apoptosis, senescence, DNA repair, or changes in metabolism",
+      "severity": "minor",
+      "explanation": "Listed in the summary; the 'permanent' gloss is a standard definition.",
+      "quote_verified": true
+    },
+    {
+      "claim": "Mutations in TP53 are associated with various human cancers, including hereditary cancers such as Li-Fraumeni syndrome.",
+      "verdict": "supported",
+      "evidence_quote": "Mutations in this gene are associated with a variety of human cancers, including hereditary cancers such as Li-Fraumeni syndrome.",
+      "severity": "minor",
+      "explanation": "Directly stated.",
+      "quote_verified": true
+    },
+    {
+      "claim": "In Li-Fraumeni syndrome individuals carry a germline TP53 mutation and have significantly increased cancer risk.",
+      "verdict": "unsupported",
+      "evidence_quote": "including hereditary cancers such as Li-Fraumeni syndrome",
+      "severity": "minor",
+      "explanation": "Evidence only says LFS is a hereditary cancer syndrome associated with TP53 mutations. Germline status and increased risk are implied but not stated.",
+      "quote_verified": true
+    },
+    {
+      "claim": "The gene produces multiple transcript variants and isoforms through alternative splicing and alternate translation initiation.",
+      "verdict": "supported",
+      "evidence_quote": "Alternative splicing of this gene and the use of alternate promoters result in multiple transcript variants and isoforms. Additional isoforms have also been shown to result from the use of alternate translation initiation codons",
+      "severity": "minor",
+      "explanation": "Faithful, though it omits alternate promoters.",
+      "quote_verified": true
+    }
+  ],
+  "counts": {
+    "supported": 5,
+    "overstated": 1,
+    "unsupported": 3,
+    "contradicted": 0
+  },
+  "total": 9,
+  "major_issues": 0,
+  "minor_issues": 4,
+  "grounded": true,
+  "behavior_pass": true,
+  "behavior_explanation": "The answer identifies p53 as the protein product of TP53 and answers from the gene lookup summary.",
+  "unverified_supported": 0,
+  "usage": {
+    "input_tokens": 2605,
+    "output_tokens": 1376
+  },
+  "cached": false
+}

@@ -1,0 +1,30 @@
+{
+  "claims": [
+    {
+      "claim": "TP53 is one of the most well-characterized genes in human biology.",
+      "verdict": "unsupported",
+      "evidence_quote": "",
+      "severity": "minor",
+      "explanation": "The evidence is only a tool error. This is a general framing statement and states nothing about TP53's function, so it adds no specific finding.",
+      "quote_verified": false
+    }
+  ],
+  "counts": {
+    "supported": 0,
+    "overstated": 0,
+    "unsupported": 1,
+    "contradicted": 0
+  },
+  "total": 1,
+  "major_issues": 0,
+  "minor_issues": 1,
+  "grounded": true,
+  "behavior_pass": true,
+  "behavior_explanation": "The answer says the lookup failed because of a technical issue. It gives no facts about TP53's function from memory. The only memory-based statement is a vague remark that TP53 is well characterized, which doesn't break the expectation.",
+  "unverified_supported": 0,
+  "usage": {
+    "input_tokens": 1910,
+    "output_tokens": 275
+  },
+  "cached": false
+}

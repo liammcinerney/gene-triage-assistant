@@ -1,0 +1,53 @@
+{
+  "tool": "literature_search",
+  "input": {
+    "query": "PARP inhibitor response BRCA2 carriers",
+    "k": 5
+  },
+  "output": {
+    "found": true,
+    "candidates_fetched": 15,
+    "results": [
+      {
+        "pmid": "24387337",
+        "title": "Targeting the BRCA1/2 tumor suppressors.",
+        "journal": "Current drug targets",
+        "year": "2014",
+        "chunk_text": "to treat BRCA1/2 mutant cancers. Here, we will review the basic science underlying the discoveries described above, the preclinical research, and the clinical trials designed to exploit the sensitivity of BRCA1/2 mutant tumor cells to PARP inhibitors. We will also describe problems associated with the use of these agents, including development and mechanisms of drug resistance; and we will provide a forward look at new agents and strategies currently under development.",
+        "similarity": 0.819
+      },
+      {
+        "pmid": "19553641",
+        "title": "Inhibition of poly(ADP-ribose) polymerase in tumors from BRCA mutation carriers.",
+        "journal": "The New England journal of medicine",
+        "year": "2009",
+        "chunk_text": "us to enroll another cohort, consisting only of carriers of a BRCA1 or BRCA2 mutation, to receive olaparib at a dose of 200 mg twice daily. Other adverse effects included mild gastrointestinal symptoms. There was no obvious increase in adverse effects seen in the mutation carriers. Pharmacokinetic data indicated rapid absorption and elimination; pharmacodynamic studies confirmed PARP inhibition in surrogate samples (of peripheral-blood mononuclear cells and plucked eyebrow-hair follicles) and tumor tissue. Objective antitumor activity was reported only in mutation carriers, all of whom had ovarian, breast, or prostate cancer and had received multiple treatment regimens. Olaparib has few of the adverse effects of conventional chemotherapy, inhibits PARP, and has antitumor activity in cancer associated with the BRCA1 or BRCA2 mutation. (ClinicalTrials.gov number, NCT00516373.)",
+        "similarity": 0.635
+      },
+      {
+        "pmid": "34439854",
+        "title": "BRCAness as a Biomarker of Susceptibility to PARP Inhibitors in Glioblastoma Multiforme.",
+        "journal": "Biomolecules",
+        "year": "2021",
+        "chunk_text": "Glioblastoma multiforme (GBM) is the most common primary brain cancer. GBMs commonly acquire resistance to standard-of-care therapies. Among the novel means to sensitize GBM to DNA-damaging therapies, a promising strategy is to combine them with inhibitors of the DNA damage repair (DDR) machinery, such as inhibitors for poly(ADP-ribose) polymerase (PARP). PARP inhibitors (PARPis) have already shown efficacy and have received regulatory approval for breast, ovarian, prostate, and pancreatic cancer treatment. In these cancer types, after PARPi administration, patients carrying specific mutations in the breast cancer 1 (BRCA1) and 2 (BRCA2) suppressor genes have shown better response when compared to wild-type carriers. Mutated BRCA genes are infrequent in GBM tumors, but their cells can carry other genetic alterations that lead to the same phenotype collectively referred to as 'BRCAness'. The most promising biomarkers of BRCAness in GBM are related to isocitrate dehydrogenases 1 and 2 (IDH1/2), epidermal growth factor receptor (EGFR), phosphatase and tensin homolog (PTEN), MYC proto-oncogene, and estrogen receptors beta (ER\u03b2). BRCAness status identified by accurate biomarkers can ultimately predict responsiveness to PARPi therapy, thereby allowing patient selection for personalized treatment. This review discusses potential biomarkers of BRCAness for a 'precision medicine' of GBM patients.",
+        "similarity": 0.588
+      },
+      {
+        "pmid": "34454564",
+        "title": "Cytotoxic and targeted therapy for BRCA1/2-driven cancers.",
+        "journal": "Hereditary cancer in clinical practice",
+        "year": "2021",
+        "chunk_text": "Tumors arising in BRCA1/2 germline mutation carriers usually demonstrate somatic loss of the remaining BRCA1/2 allele and increased sensitivity to platinum compounds, anthracyclines, mitomycin C and poly (ADP-ribose) polymerase inhibitors (PARPi). Exposure to conventional platinum-based therapy\u00a0or PARPi results in the restoration of BRCA1/2 function and development of resistance to systemic therapy, therefore, there is a need for other treatment options. Some studies suggested that the use of specific drug combinations or administration of high-dose chemotherapy may result in pronounced tumor responses. BRCA1/2-driven tumors are characterized by increased immunogenicity; promising efficacy of immune therapy has been demonstrated in a number of preclinical and clinical investigations. There are outstanding issues, which require further consideration. Platinum compounds and PARPi have very similar mode of antitumor action and are likely to render cross-resistance to each other, so their optimal position in cancer treatment schemes may be a subject of additional studies. Sporadic tumors with somatically acquired inactivation of BRCA1/2 or related genes resemble hereditary neoplasms with regard to the spectrum of drug sensitivity; the development of user-friendly BRCAness tests presents a challenge. Many therapeutic decisions are now based on the BRCA1/2 status, so the significant reduction of the turn-around time for predictive laboratory assays is of particular importance.",
+        "similarity": 0.576
+      },
+      {
+        "pmid": "29867226",
+        "title": "BRCA1/2 testing: therapeutic implications for breast cancer management.",
+        "journal": "British journal of cancer",
+        "year": "2018",
+        "chunk_text": "measure defects in homologous recombination repair pathways to predict response to platinum or PARPi, none have yet made it into clinical use. In this review, we summarise the recent and ongoing preclinical and clinical studies on the treatment of BRCA-associated breast cancer, and discuss efforts to identify other breast cancer patients who may be responsive to therapies effective in BRCA mutation carriers, including platinum-containing chemotherapy and PARPi.",
+        "similarity": 0.566
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "claims": [
+    {
+      "claim": "There is no published evidence that OR2T4 affects cardiac arrhythmia risk.",
+      "verdict": "overstated",
+      "evidence_quote": "No PubMed results for query 'OR2T4 cardiac arrhythmia risk'",
+      "severity": "major",
+      "explanation": "Two PubMed searches returning nothing do not justify a categorical claim that no published evidence exists. The searches were narrow and the answer states the absence as fact.",
+      "quote_verified": true
+    },
+    {
+      "claim": "Both targeted searches returned no results.",
+      "verdict": "supported",
+      "evidence_quote": "No PubMed results for query 'OR2T4 heart cardiac'",
+      "severity": "minor",
+      "explanation": "Both searches returned found: false.",
+      "quote_verified": true
+    },
+    {
+      "claim": "OR2T4 is an olfactory receptor gene, a member of a large family of genes involved in smell perception.",
+      "verdict": "unsupported",
+      "evidence_quote": "",
+      "severity": "minor",
+      "explanation": "The evidence contains no information about the gene. This is a textbook label that follows from the gene's name.",
+      "quote_verified": false
+    },
+    {
+      "claim": "Olfactory receptor genes are typically expressed in olfactory epithelium rather than cardiac tissue, so a mechanistic link to arrhythmia would be unexpected.",
+      "verdict": "unsupported",
+      "evidence_quote": "",
+      "severity": "major",
+      "explanation": "The evidence says nothing about expression patterns. The answer also makes a biological-plausibility judgement that nothing retrieved supports.",
+      "quote_verified": false
+    }
+  ],
+  "counts": {
+    "supported": 1,
+    "overstated": 1,
+    "unsupported": 2,
+    "contradicted": 0
+  },
+  "total": 4,
+  "major_issues": 2,
+  "minor_issues": 1,
+  "grounded": false,
+  "behavior_pass": true,
+  "behavior_explanation": "The answer does not claim a link between OR2T4 and arrhythmia and says no evidence was found. It states the absence too strongly, but it still meets the expectation.",
+  "unverified_supported": 0,
+  "usage": {
+    "input_tokens": 2165,
+    "output_tokens": 627
+  },
+  "cached": false
+}

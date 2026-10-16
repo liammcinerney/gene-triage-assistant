@@ -1,0 +1,34 @@
+{
+  "tool": "gene_lookup",
+  "input": {
+    "symbol": "BRCA2"
+  },
+  "output": {
+    "found": true,
+    "symbol": "BRCA2",
+    "name": "BRCA2 DNA repair associated",
+    "summary": "The product of this gene in involved in maintenance of genome stability. It is involved in double-strand break repair pathways during mitotic and meiotic homologous recombination and functions in protecting DNA replication forks. The encoded protein contains sites for interactions with PALB2 and EMSY and an N-terminal DNA binding domain. It also contains a RAD51 binding domain with multiple components. It has multiple BRC repeats, an alpha helix domain, oligonucleotide binding folds, and a tower-like domain. It has a nuclear localization signal and a phosphorylation site for cyclin-dependent kinase. The C-terminus of the protein can bind single-stranded and double-stranded DNA. The product of this gene interacts with multiple proteins, including RAD51. It is involved in recruiting RAD51 filaments to DNA double-strand break sites and also in cytoplasmic division. It also acts as a tumor suppressor. Mutations in this gene or decreased expression have been implicated in multiple tumor types, including breast, ovarian, pancreatic, prostate and other cancers. [provided by RefSeq, May 2026].",
+    "aliases": [
+      "BRCC2",
+      "BROVCA2",
+      "FACD",
+      "FAD",
+      "FAD1",
+      "FANCD",
+      "FANCD1",
+      "GLM3",
+      "PNCA2",
+      "XRCC11"
+    ],
+    "entrez_id": "675",
+    "ensembl_id": "ENSG00000139618",
+    "genomic_location": {
+      "chr": "13",
+      "end": 32400268,
+      "ensemblgene": "ENSG00000139618",
+      "start": 32315086,
+      "strand": 1
+    },
+    "gene_type": "protein-coding"
+  }
+}

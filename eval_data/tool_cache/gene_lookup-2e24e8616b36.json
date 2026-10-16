@@ -1,0 +1,10 @@
+{
+  "tool": "gene_lookup",
+  "input": {
+    "symbol": "FAKEGENE321"
+  },
+  "output": {
+    "found": false,
+    "error": "No human gene found for symbol 'FAKEGENE321'"
+  }
+}

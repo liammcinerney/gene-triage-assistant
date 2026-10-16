@@ -1,0 +1,97 @@
+{
+  "claims": [
+    {
+      "claim": "BRCA2 is a tumor suppressor gene located on chromosome 13.",
+      "verdict": "supported",
+      "evidence_quote": "\"chr\": \"13\"",
+      "explanation": "Lookup gives chr 13 and says it acts as a tumor suppressor.",
+      "quote_verified": false
+    },
+    {
+      "claim": "BRCA2 is involved in double-strand break repair via homologous recombination in mitotic and meiotic processes, and protects replication forks.",
+      "verdict": "supported",
+      "evidence_quote": "involved in double-strand break repair pathways during mitotic and meiotic homologous recombination and functions in protecting DNA replication forks",
+      "explanation": "Faithful paraphrase. 'From collapse' is a minor embellishment.",
+      "quote_verified": true
+    },
+    {
+      "claim": "BRCA2 has RAD51 binding sites via BRC repeats, DNA binding domains, and interaction sites with PALB2 and EMSY.",
+      "verdict": "supported",
+      "evidence_quote": "The encoded protein contains sites for interactions with PALB2 and EMSY and an N-terminal DNA binding domain. It also contains a RAD51 binding domain with multiple components. It has multiple BRC repeats",
+      "explanation": "Matches the gene summary.",
+      "quote_verified": true
+    },
+    {
+      "claim": "Mutations or decreased expression of BRCA2 are implicated in breast, ovarian, pancreatic, prostate and other cancers.",
+      "verdict": "supported",
+      "evidence_quote": "Mutations in this gene or decreased expression have been implicated in multiple tumor types, including breast, ovarian, pancreatic, prostate and other cancers.",
+      "explanation": "Direct match.",
+      "quote_verified": true
+    },
+    {
+      "claim": "A 2009 study (PMID 19553641) showed olaparib had objective antitumor activity only in BRCA1/2 mutation carriers with ovarian, breast, or prostate cancer who had received multiple prior treatments.",
+      "verdict": "supported",
+      "evidence_quote": "Objective antitumor activity was reported only in mutation carriers, all of whom had ovarian, breast, or prostate cancer and had received multiple treatment regimens.",
+      "explanation": "Matches the cited abstract.",
+      "quote_verified": true
+    },
+    {
+      "claim": "Olaparib was well-tolerated with minimal adverse effects compared to conventional chemotherapy.",
+      "verdict": "supported",
+      "evidence_quote": "Olaparib has few of the adverse effects of conventional chemotherapy",
+      "explanation": "Close paraphrase of the abstract.",
+      "quote_verified": true
+    },
+    {
+      "claim": "BRCA2-mutant tumors are more sensitive to PARPi because BRCA2 loss impairs homologous recombination repair, and PARPi block an alternative repair pathway, creating synthetic lethality (PMID 34454564).",
+      "verdict": "unsupported",
+      "evidence_quote": "Tumors arising in BRCA1/2 germline mutation carriers usually demonstrate somatic loss of the remaining BRCA1/2 allele and increased sensitivity to platinum compounds, anthracyclines, mitomycin C and poly (ADP-ribose) polymerase inhibitors (PARPi).",
+      "explanation": "PMID 34454564 supports increased sensitivity but says nothing about synthetic lethality or blocking an alternative repair pathway. The gene summary does not cover this either.",
+      "quote_verified": true
+    },
+    {
+      "claim": "Exposure to PARPi can lead to restoration of BRCA1/2 function and resistance (PMID 34454564).",
+      "verdict": "supported",
+      "evidence_quote": "Exposure to conventional platinum-based therapy or PARPi results in the restoration of BRCA1/2 function and development of resistance to systemic therapy",
+      "explanation": "Matches the cited text.",
+      "quote_verified": true
+    },
+    {
+      "claim": "The restoration and resistance finding suggests a need for combination strategies or sequential treatment approaches.",
+      "verdict": "overstated",
+      "evidence_quote": "Some studies suggested that the use of specific drug combinations or administration of high-dose chemotherapy may result in pronounced tumor responses.",
+      "explanation": "The source mentions the need for other treatment options and possible combinations. Sequential treatment is not stated, and the passage is only partly supportive.",
+      "quote_verified": true
+    },
+    {
+      "claim": "PARPi have received regulatory approval for BRCA1/2-associated breast, ovarian, prostate, and pancreatic cancers (PMID 34439854), making BRCA2 status a key biomarker for treatment selection.",
+      "verdict": "overstated",
+      "evidence_quote": "PARPi have already shown efficacy and have received regulatory approval for breast, ovarian, prostate, and pancreatic cancer treatment.",
+      "explanation": "The source says approval is for these cancer types, with BRCA-mutated patients responding better. It does not say approval is restricted to BRCA-associated disease. Describing BRCA2 status as a key biomarker is a modest extrapolation.",
+      "quote_verified": false
+    },
+    {
+      "claim": "The literature shows strong evidence for PARPi efficacy in BRCA2 carriers, framed as 'recent evidence'.",
+      "verdict": "overstated",
+      "evidence_quote": "Objective antitumor activity was reported only in mutation carriers",
+      "explanation": "The only primary clinical study retrieved is from 2009 and is an early-phase trial. The other sources are reviews. 'Strong' and 'recent' are generous, and there are no BRCA2-specific data.",
+      "quote_verified": true
+    }
+  ],
+  "counts": {
+    "supported": 7,
+    "overstated": 3,
+    "unsupported": 1,
+    "contradicted": 0
+  },
+  "total": 11,
+  "grounded": false,
+  "behavior_pass": true,
+  "behavior_explanation": "The answer gives a gene overview drawn from the lookup and PARPi evidence from the retrieved studies, with PMIDs. It has some weaknesses: the synthetic lethality claim is attributed to a PMID that doesn't support it, and the 2009 study is presented as \"recent\" evidence.",
+  "unverified_supported": 1,
+  "usage": {
+    "input_tokens": 5114,
+    "output_tokens": 1950
+  },
+  "cached": false
+}

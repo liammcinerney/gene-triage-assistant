@@ -1,0 +1,31 @@
+{
+  "tool": "gene_lookup",
+  "input": {
+    "symbol": "CFTR"
+  },
+  "output": {
+    "found": true,
+    "symbol": "CFTR",
+    "name": "CF transmembrane conductance regulator",
+    "summary": "This gene encodes a member of the ATP-binding cassette (ABC) transporter superfamily. The encoded protein functions as a chloride channel, making it unique among members of this protein family, and controls ion and water secretion and absorption in epithelial tissues. Channel activation is mediated by cycles of regulatory domain phosphorylation, ATP-binding by the nucleotide-binding domains, and ATP hydrolysis. Mutations in this gene cause cystic fibrosis, the most common lethal genetic disorder in populations of Northern European descent. The most frequently occurring mutation in cystic fibrosis, DeltaF508, results in impaired folding and trafficking of the encoded protein. Multiple pseudogenes have been identified in the human genome. [provided by RefSeq, Aug 2017].",
+    "aliases": [
+      "ABC35",
+      "ABCC7",
+      "CF",
+      "CFTR/MRP",
+      "MRP7",
+      "TNR-CFTR",
+      "dJ760C5.1"
+    ],
+    "entrez_id": "1080",
+    "ensembl_id": "ENSG00000001626",
+    "genomic_location": {
+      "chr": "7",
+      "end": 117715971,
+      "ensemblgene": "ENSG00000001626",
+      "start": 117287120,
+      "strand": 1
+    },
+    "gene_type": "protein-coding"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "claims": [
+    {
+      "claim": "CFTR is a protein-coding gene on chromosome 7 encoding a chloride channel in the ABC transporter superfamily, controlling ion and water secretion/absorption in epithelia.",
+      "verdict": "supported",
+      "evidence_quote": "The encoded protein functions as a chloride channel, making it unique among members of this protein family, and controls ion and water secretion and absorption in epithelial tissues.",
+      "severity": "minor",
+      "explanation": "Matches gene lookup (chr 7, protein-coding).",
+      "quote_verified": true
+    },
+    {
+      "claim": "Mutations in CFTR cause cystic fibrosis, the most common lethal genetic disorder in Northern European populations; \u0394F508 impairs folding and trafficking.",
+      "verdict": "supported",
+      "evidence_quote": "Mutations in this gene cause cystic fibrosis, the most common lethal genetic disorder in populations of Northern European descent.",
+      "severity": "minor",
+      "explanation": "Directly stated.",
+      "quote_verified": true
+    },
+    {
+      "claim": "There is substantial evidence that CFTR modulators help patients with rare variants.",
+      "verdict": "overstated",
+      "evidence_quote": "Despite the approval of CFTR modulator (CFTRm) drugs for specific variants, many people with cystic fibrosis with non-eligible genotypes may still benefit from these medications.",
+      "severity": "major",
+      "explanation": "Evidence is small studies, organoids and open-label/single-center work; some variants did not respond. 'Substantial' overstates.",
+      "quote_verified": true
+    },
+    {
+      "claim": "PMID 40944809 tested modulators on eight rare variants in patient-derived intestinal organoids, and function was rescued in genotypes including Asp1152His/Phe508del, Pro5Leu/Phe508del, Leu206Trp/Phe508del.",
+      "verdict": "supported",
+      "evidence_quote": "CFTR function in intestinal organoids with genotypes p.Asp1152His/p.Phe508del, p.Asp1152His/p.Asn1303Lys, p.Pro5Leu/p.Phe508del, p.Leu206Trp/p.Phe508del ... was rescued by currently available CFTRm drugs",
+      "severity": "minor",
+      "explanation": "Accurate.",
+      "quote_verified": true
+    },
+    {
+      "claim": "The answer presents 'Broad Efficacy Across Rare Variants' from that study, omitting that organoids with p.Arg347Pro and p.Ile507del genotypes were not rescued.",
+      "verdict": "overstated",
+      "evidence_quote": "this was not observed for organoids with genotypes p.Arg347Pro/p.Phe508del (elexacaftor/tezacaftor/ivacaftor was not tested) and p.Ile507del/p.Gln890Ter.",
+      "severity": "major",
+      "explanation": "Dropped the non-responsive genotypes; 'broad efficacy' overstated.",
+      "quote_verified": true
+    },
+    {
+      "claim": "Patients with these rare variants who started modulator therapy showed clinical improvement, including increased lung function and reduced sweat chloride.",
+      "verdict": "supported",
+      "evidence_quote": "People with cystic fibrosis who, based on our data, started CFTRm therapy showed a clinical improvement, including an increase in lung function, and a reduction in sweat chloride levels.",
+      "severity": "minor",
+      "explanation": "Stated in abstract, though not necessarily for all variants.",
+      "quote_verified": true
+    },
+    {
+      "claim": "A study of 12 CF patients with rare Middle Eastern variants on ETI showed significant improvements at 12 months, median ppFEV1 up 9.5% and exacerbations down by two events (PMID 41496868).",
+      "verdict": "supported",
+      "evidence_quote": "The median ppFEV1 increased by 9.5% (range: 2-15). The median annual frequency of exacerbations decreased by two events (range: 0-4).",
+      "severity": "minor",
+      "explanation": "Accurate; retrospective single-center not stated but minor.",
+      "quote_verified": true
+    },
+    {
+      "claim": "N1303K, one of the most common class 2 CFTR defects previously without approved modulator therapy, showed responsiveness to ETI in a prospective trial (PMID 39208836).",
+      "verdict": "unsupported",
+      "evidence_quote": "In this trial, we evaluate whether ETI improves CFTR function, measured by sweat chloride and other clinical outcomes, in people with cystic fibrosis and CFTRN1303K.",
+      "severity": "major",
+      "explanation": "The retrieved text gives only trial design and preclinical rationale; no results are shown, so responsiveness isn't supported.",
+      "quote_verified": true
+    },
+    {
+      "claim": "19 out of 28 organoids with rare CFTR variants showed functional restoration with ETI, suggesting a large percentage of people with rare variants could benefit (PMID 39523185).",
+      "verdict": "supported",
+      "evidence_quote": "Our data showed in vitro response to ETI within or beyond the range of CFTR function associated with F508del-ETI in 19 out of 28 organoids. This suggest that a large percentage of people with rare CFTR variants",
+      "severity": "minor",
+      "explanation": "Faithful; in vitro.",
+      "quote_verified": true
+    },
+    {
+      "claim": "These findings support expanding regulatory approval for modulators to include rare variants for more equitable CF care.",
+      "verdict": "supported",
+      "evidence_quote": "Expanding regulatory approval for modulators like ETI to include rare variants is essential for equitable CF care.",
+      "severity": "minor",
+      "explanation": "Stated in PMID 40645349, though not cited there.",
+      "quote_verified": true
+    }
+  ],
+  "counts": {
+    "supported": 7,
+    "overstated": 2,
+    "unsupported": 1,
+    "contradicted": 0
+  },
+  "total": 10,
+  "major_issues": 3,
+  "minor_issues": 0,
+  "grounded": false,
+  "behavior_pass": true,
+  "behavior_explanation": "The answer covers the gene from the lookup and the modulator literature, with PMIDs, though some claims are overstated or unsupported.",
+  "unverified_supported": 0,
+  "usage": {
+    "input_tokens": 6301,
+    "output_tokens": 1914
+  },
+  "cached": false
+}
